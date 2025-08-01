@@ -102,3 +102,134 @@
     font-size: 12px;
   }
 }
+
+/* =========================
+   Tic Tac Toe Game Styling
+   ========================= */
+
+.ttt-container {
+  width: 375px;
+  max-width: 92vw;
+  margin: 0 auto;
+  padding: 36px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-secondary);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(30, 42, 105, 0.11),
+              0 1.5px 6.5px 0 rgba(25, 118, 210, 0.07);
+  margin-top: 40px;
+}
+
+.ttt-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.ttt-status {
+  margin-bottom: 28px;
+  font-size: 1.19rem;
+  min-height: 28px;
+  font-weight: 600;
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+.ttt-board-row {
+  display: flex;
+}
+
+.ttt-square {
+  width: 74px;
+  height: 74px;
+  background: #fff;
+  border: 2px solid var(--border-color, #e9ecef);
+  margin: 3.5px;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #1976d2;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1.5px 5px rgba(24, 54, 83, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-square:disabled {
+  background: #f0f4f8;
+  color: #bdbdbd;
+  cursor: default;
+}
+
+.ttt-square.highlight {
+  border-color: #f44336;
+  background: #f4433617;
+  color: #f44336;
+}
+
+.ttt-restart-btn {
+  margin-top: 20px;
+  padding: 0.9em 2.4em;
+  border: none;
+  border-radius: 12px;
+  background: #1976d2;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s, box-shadow 0.15s;
+  box-shadow: 0 1.2px 6px rgba(33,67,92,0.07);
+}
+
+.ttt-restart-btn:hover, .ttt-restart-btn:focus {
+  background: #115293;
+  opacity: 0.93;
+}
+
+.ttt-footer {
+  margin-top: 60px;
+}
+
+@media (max-width: 480px) {
+  .ttt-container {
+    width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 15px;
+    padding-top: 12px;
+  }
+  .ttt-title {
+    font-size: 1.35rem;
+  }
+  .ttt-status {
+    font-size: 1rem;
+  }
+  .ttt-board {
+    margin-bottom: 7px;
+  }
+  .ttt-square {
+    width: 23vw;
+    min-width: 53px;
+    max-width: 89px;
+    height: 23vw;
+    min-height: 53px;
+    max-height: 89px;
+    font-size: 2rem;
+  }
+  .ttt-restart-btn {
+    font-size: 1rem;
+    padding: 0.7em 1.4em;
+  }
+}
